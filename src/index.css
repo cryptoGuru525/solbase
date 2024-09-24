@@ -1,0 +1,193 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  @apply w-0.5 rounded-full;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-primary;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-symbol/10;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-symbolHover;
+}
+
+body {
+  @apply min-h-screen m-0 text-gray-300;
+  font-family: Helvetica, Arial, system-ui, -apple-system, Segoe UI, Roboto,
+    Ubuntu, Cantarell, Noto Sans, sans-serif, BlinkMacSystemFont, "Segoe UI",
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" !important;
+
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(9, 9, 121, 1) 42%,
+    rgba(61, 0, 91, 1) 100%
+  );
+}
+.presale_form {
+  -webkit-box-shadow: 0px 0px 168px 82px rgba(0, 0, 0, 1);
+  -moz-box-shadow: 0px 0px 168px 82px rgba(0, 0, 0, 1);
+  box-shadow: 0px 0px 168px 82px rgba(0, 0, 0, 1);
+}
+.buy_card {
+  @apply lg:p-6 p-2 bg-primary/40 rounded-lg w-full grid grid-cols-12;
+}
+
+.main_btn {
+  @apply py-2 font-semibold  rounded-full text-center relative hover:text-white transition ease-in-out duration-500 hover:scale-105 shadow-black shadow-2xl  text-black;
+}
+
+/* .main_btn::before {
+  @apply content-[''] absolute h-full  bg-[#e619e6]/10 w-0 top-0 transition-all duration-500 rounded-full;
+}
+
+.main_btn::before:hover {
+  @apply w-full right-auto left-0 rounded-full;
+} */
+
+.tr {
+  @apply bg-secondary border-t border-[#20334b] cursor-pointer last:rounded-b-lg hover:bg-primary transition ease-in-out;
+}
+
+.action_panel_container {
+  @apply flex flex-col md:flex-row justify-between p-2 lg:p-3 w-full border border-symbolBorder last:rounded-b-md bg-primary;
+}
+
+.action_panel {
+  @apply flex flex-row md:flex-col items-center md:items-start justify-between md:justify-center w-full lg:w-1/4;
+}
+
+.tab_panel {
+  @apply lg:w-[370px] w-[270px] h-12 lg:h-14 rounded-full bg-secondary mb-2 flex justify-center p-1;
+}
+
+.tab_panel .tab_button {
+  @apply w-1/2 h-full rounded-full flex justify-center items-center cursor-pointer hover:text-symbol;
+}
+
+.tab_panel .tab_button.active {
+  @apply text-symbol  bg-primary/60 border border-symbol;
+}
+
+.nav_action {
+  @apply flex justify-end items-center;
+}
+
+.nav_action p {
+  @apply text-symbol;
+}
+
+.nav_action button {
+  @apply ml-4;
+}
+
+.nav_action button img {
+  @apply w-[40px] h-[40px];
+}
+
+.nav_action .btn_connect {
+  @apply w-[156px] h-[40px] rounded-full text-black;
+}
+
+.card {
+  @apply rounded-xl bg-secondary py-8 px-6 w-full max-w-[540px] m-8;
+}
+
+.base_bg {
+  background: linear-gradient(270deg, #ab66ff, #14f195 101.39%);
+}
+.solana-bg {
+  background: linear-gradient(
+    101.11deg,
+    #f087ff 14.47%,
+    #6e1fce 39.43%,
+    rgba(110, 31, 206, 0.1) 76.77%
+  );
+}
+.sol-text {
+  background: linear-gradient(270deg, #ab66ff, #14f195 101.39%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.IKcpG {
+  background: #111c29 !important;
+  border-bottom: 1px solid #347cf70f !important;
+}
+
+.hllvoW {
+  background: #111c29 !important;
+}
+
+.haxTeh {
+  border: 1px solid #31455de0 !important;
+  box-shadow: none !important;
+  background: none !important;
+}
+
+.circle_animation {
+  animation: spin 5s linear infinite;
+}
+
+.bg-secondary {
+  @apply bg-secondary/90 backdrop-blur-sm;
+}
+
+.bg-sidebar {
+  background-color: #1221423f;
+}
+
+.chakra-modal__content {
+  @apply bg-secondary/90 !important;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+td {
+  @apply p-0;
+}
+
+.bounce_animation {
+  animation: bounce 2.6s infinite;
+}
+
+.animate-pulse {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-25%);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+  }
+}
+
+/* At the top level of your code */
+@media screen and (min-width: 640px) {
+  .wallet-adapter-modal {
+    left: 250px !important;
+  }
+  .chakra-modal__content-container {
+    left: 130px !important;
+  }
+}
